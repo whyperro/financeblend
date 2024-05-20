@@ -10,7 +10,7 @@ import { Loader2 } from 'lucide-react';
 import { z } from 'zod';
 import { useEditAccount } from '../api/useEditAccount';
 import { useGetAccount } from '../api/useGetAccount';
-import { useOpenAccount } from '../hooks/useOpenAccounts';
+import { useOpenAccount } from '../hooks/useOpenAccount';
 import { AccountForm } from './AccountForm';
 
 const formSchema = insertAccountSchema.pick({
@@ -28,7 +28,6 @@ export const EditAccountSheet = () => {
   const editMutation = useEditAccount(id);
 
   const isPending = editMutation.isPending;
-
 
   const isLoading = accountQuery.isLoading;
 

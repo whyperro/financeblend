@@ -1,4 +1,3 @@
-
 import { InferRequestType, InferResponseType } from "hono";
 import {useMutation, useQueryClient} from '@tanstack/react-query';
 
@@ -28,7 +27,7 @@ export const useEditAccount = (id?: string) => {
     },
     onSuccess: () => {
       toast.success("¡Cuenta actualizada!")
-      queryClient.invalidateQueries({queryKey: ["accounts", {id}]})
+      queryClient.invalidateQueries({queryKey: ["account", {id}]})
       queryClient.invalidateQueries({queryKey: ["accounts"]})
     },
     onError: () => {

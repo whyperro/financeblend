@@ -7,7 +7,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
-import { useOpenAccount } from '@/features/accounts/hooks/useOpenAccounts';
+import { useOpenAccount } from '@/features/accounts/hooks/useOpenAccount';
 import { Edit, MoreHorizontal } from 'lucide-react';
 
 

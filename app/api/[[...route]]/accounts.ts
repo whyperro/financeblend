@@ -32,7 +32,6 @@ const app = new Hono()
   async (c) => {
     const auth = getAuth(c);
     const {id} = c.req.valid("param");
-    console.log(id)
 
     if(!id){
       return c.json({
@@ -128,26 +127,26 @@ const app = new Hono()
 )
 .patch(
   '/:id',
+  clerkMiddleware(),
   zValidator("param", z.object({
     id:z.string().optional(),
   })),
   zValidator("json", insertAccountSchema.pick({
     name: true,
   })),
-  clerkMiddleware(),
   async (c) => {
     const auth = getAuth(c);
     const {id} = c.req.valid("param")
     const values = c.req.valid("json")
 
-    if(!auth?.userId){
-      return c.json({error: "No autorizado"}, 401)
-    }
-
     if(!id){
       return c.json({
         error: "Bad request"
       }, 400)
+    }
+
+    if(!auth?.userId){
+      return c.json({error: "No autorizado"}, 401)
     }
 
     const [data] = await db
@@ -163,7 +162,6 @@ const app = new Hono()
 
     if(!data) { 
       return c.json({error: "No se encontro la cuenta"}, 404)
-      
     }
 
     return c.json({data});
