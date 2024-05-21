@@ -55,7 +55,9 @@ export const AccountForm = ({id, defaultValues, onDelete, onSubmit, disabled}: A
                 Nombre
               </FormLabel>
               <FormControl>
-                <Input 
+                <Input
+                  autoComplete='none'
+                  required
                   disabled={disabled}
                   placeholder='e.j Efectivo, Banco, Tarjeta Credito/Debito'
                   {...field}
