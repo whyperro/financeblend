@@ -134,7 +134,7 @@ export function DataTable<TData, TValue>({
             ) : (
               <TableRow>
                 <TableCell colSpan={columns.length} className="h-24 text-center">
-                  Oops, sin resultados.
+                  Oops, sin resultados :(
                 </TableCell>
               </TableRow>
             )}
