@@ -32,7 +32,7 @@ import useConfirm from "@/hooks/useConfirm"
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
-  filteredKey: string
+  filteredKey: string,
   onDelete: (row: Row<TData>[]) => void,
   disabled?: boolean,
 }

@@ -277,8 +277,6 @@ const app = new Hono()
   async (c) => {
     const auth = getAuth(c);
     const {id} = c.req.valid("param")
-
-
     if(!id){
       return c.json({
         error: "Bad request"
@@ -302,17 +300,16 @@ const app = new Hono()
         )
       )
     )
-
+    console.log('before data')
     const [data] = await db
     .with(transactionToDelete)
     .delete(transactions)
     .where(
-      inArray(transactions.id, sql`select id from ${transactionToDelete}`)
+      inArray(transactions.id, sql`(select id from ${transactionToDelete})`)
     )
     .returning({
       id: transactions.id
-    })
-    
+    })    
 
     if(!data) { 
       return c.json({error: "No se encontro la categoria"}, 404)

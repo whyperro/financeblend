@@ -76,7 +76,12 @@ export const TransactionForm = ({id, defaultValues, onDelete, onSubmit, disabled
           render={({field}) => (
             <FormItem>
               <FormControl>
-                <DatePicker value={field.value} onChange={field.onChange} disabled={false}/>
+                <>
+                  <DatePicker value={field.value} onChange={field.onChange} disabled={false}/>
+                  {!field.value && (
+                    <p className='text-xs text-muted-foreground text-red-400'>Debe seleccionar una fecha...</p>
+                  )}
+                </>
               </FormControl>
             </FormItem>
           )}
