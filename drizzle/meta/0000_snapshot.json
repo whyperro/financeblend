@@ -1,5 +1,5 @@
 {
-  "id": "da3a1748-2974-4f1c-8d86-8c9bf0ebcefe",
+  "id": "2ce84aa2-d9f2-4d5c-8093-43349cb6d905",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -100,8 +100,8 @@
           "primaryKey": false,
           "notNull": false
         },
-        "data": {
-          "name": "data",
+        "date": {
+          "name": "date",
           "type": "timestamp",
           "primaryKey": false,
           "notNull": true

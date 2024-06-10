@@ -1,16 +1,12 @@
-'use client'
-
-import { Button } from "@/components/ui/button";
-import { useNewAccount } from "@/features/accounts/hooks/useNewAccount";
-import { UserButton } from "@clerk/nextjs";
+import DataCharts from "@/components/DataCharts";
+import DataGrid from "@/components/DataGrid";
 
 export default function Home() {
-  const {onOpen} = useNewAccount();
   return (
-    <main>
-      <Button onClick={onOpen}>Nueva acc</Button>
-      <UserButton afterSignOutUrl="/" />
-    </main>
+    <div className="max-w-screen-2xl mx-auto w-full pb-10 -mt-24">
+      <DataGrid />
+      <DataCharts />
+    </div>
   );
 }
   

@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS "transactions" (
 	"amount" integer NOT NULL,
 	"payee" text NOT NULL,
 	"notes" text,
-	"data" timestamp NOT NULL,
+	"date" timestamp NOT NULL,
 	"account_id" text NOT NULL,
 	"category_id" text
 );
