@@ -49,7 +49,6 @@ const Navigation = () => {
     setOpen(false);
   }
 
-  console.log(isMobile)
 
   if(isMobile) {
     return (

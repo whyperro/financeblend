@@ -24,6 +24,8 @@ type Props = {
 const Chart = ({data = []}: Props) => {
   const [chartType, setChartType] = useState("area");
 
+  console.log(data)
+
   const onTypeChange = (type: string) => {
     setChartType(type);
   }

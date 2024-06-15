@@ -17,7 +17,8 @@ export const useGetTransactions = () => {
       const response = await client.api.transactions.$get({
         query: {
           from, 
-          to, accountId
+          to,
+          accountId,
         }
       });
 

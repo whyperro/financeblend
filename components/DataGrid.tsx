@@ -14,7 +14,6 @@ const DataGrid = () => {
   const to = params.get("to") || undefined;
   const from = params.get("from") || undefined;
   const dataRangeLabel = formatDateRange({to, from});
-  console.log(isLoading)
   
   if(isLoading) {
     return (

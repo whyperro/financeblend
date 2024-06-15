@@ -26,6 +26,7 @@ export const useCreateAccount = () => {
     onSuccess: () => {
       toast.success("¡Cuenta creada!")
       queryClient.invalidateQueries({queryKey: ["accounts"]})
+      queryClient.invalidateQueries({queryKey: ["summary"]})
     },
     onError: () => {
       toast.error("Oops... no se pudo crear la cuenta.")

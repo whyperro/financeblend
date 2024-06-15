@@ -30,7 +30,7 @@ const SpendingPie = ({data = []}: Props) => {
 
   return (
     <Card className="border-none drop-shadow-md">
-      <CardHeader className="flex space-y-2 lg:space-y-0 lg:flex-row lg:items-center justify-between">
+      <CardHeader className="flex flex-col space-y-2 lg:space-y-0 xl:flex-row lg:items-center justify-between">
         <CardTitle className="text-xl line-clamp-1">
           Categorias
         </CardTitle>
@@ -62,7 +62,7 @@ const SpendingPie = ({data = []}: Props) => {
       </CardHeader>
       <CardContent>
         {data.length === 0 ? (
-          <div className="flex flex-cl gap-y-4 items-center justify-center h-[350px] w-full">
+          <div className="flex flex-col gap-y-4 items-center justify-center h-[350px] w-full">
             <FileSearch className="size-6 text-muted-foreground"/>
             <p>No se ha encontrado información de este periodo...</p>
           </div>

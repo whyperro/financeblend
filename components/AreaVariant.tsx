@@ -48,7 +48,7 @@ const AreaVariant = ({data}: Props) => {
           stackId={"income"} 
           strokeWidth={2} 
           stroke='#3d82f6' 
-          fill='url(income)' 
+          fill='url(#income)' 
           className='drop-shadow-lg'
         />
         <Area 
@@ -56,7 +56,8 @@ const AreaVariant = ({data}: Props) => {
           dataKey={"expenses"} 
           stackId={"expenses"} 
           strokeWidth={2} 
-          stroke='#f43f5e' fill='url(expenses)' 
+          stroke='#f43f5e' 
+           fill='url(#expenses)' 
           className='drop-shadow-lg'
         />
       </AreaChart>
