@@ -58,7 +58,7 @@ export const AccountForm = ({id, defaultValues, onDelete, onSubmit, disabled}: C
                   required
                   autoComplete='none'
                   disabled={disabled}
-                  placeholder='e.j Efectivo, Banco, Tarjeta Credito/Debito'
+                  placeholder='e.j Comida, Ropa, Estudios...'
                   {...field}
                 />
               </FormControl>
